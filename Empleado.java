@@ -1,24 +1,18 @@
-package Domain;
+package domain;
+
+import java.time.LocalDate;
 
 public class Empleado {
     private int idEmpleado;
-    private String nombreEmpleado;
-    private String apellidos;
-    private String telefono;
-    private String correo;
-    private String direccion;
+    private String cargo;
     private String departamento;
-    private String ciudad;
+    private LocalDate fechaIngreso;
 
-    public Empleado(int idEmpleado, String nombreEmpleado, String apellidos, String telefono, String correo, String direccion, String departamento, String ciudad) {
+    public Empleado(int idEmpleado, String cargo, String departamento, LocalDate fechaIngreso) {
         this.idEmpleado = idEmpleado;
-        this.nombreEmpleado = nombreEmpleado;
-        this.apellidos = apellidos;
-        this.telefono = telefono;
-        this.correo = correo;
-        this.direccion = direccion;
+        this.cargo = cargo;
         this.departamento = departamento;
-        this.ciudad = ciudad;
+        this.fechaIngreso = fechaIngreso;
     }
 
     public int getIdEmpleado() {
@@ -29,44 +23,12 @@ public class Empleado {
         this.idEmpleado = idEmpleado;
     }
 
-    public String getNombreEmpleado() {
-        return nombreEmpleado;
+    public String getCargo() {
+        return cargo;
     }
 
-    public void setNombreEmpleado(String nombreEmpleado) {
-        this.nombreEmpleado = nombreEmpleado;
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
     public String getDepartamento() {
@@ -77,25 +39,21 @@ public class Empleado {
         this.departamento = departamento;
     }
 
-    public String getCiudad() {
-        return ciudad;
+    public LocalDate getFechaIngreso() {
+        return fechaIngreso;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public void setFechaIngreso(LocalDate fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
     }
 
     @Override
     public String toString() {
         return "Empleado{" +
                 "idEmpleado=" + idEmpleado +
-                ", nombreEmpleado='" + nombreEmpleado + '\'' +
-                ", apellidos='" + apellidos + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", correo='" + correo + '\'' +
-                ", direccion='" + direccion + '\'' +
+                ", cargo='" + cargo + '\'' +
                 ", departamento='" + departamento + '\'' +
-                ", ciudad='" + ciudad + '\'' +
+                ", fechaIngreso=" + fechaIngreso +
                 '}';
     }
 }
